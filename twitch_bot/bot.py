@@ -1,6 +1,7 @@
 import os
 from twitchio.ext import commands
 from dotenv import load_dotenv
+from telemetry.telemetry_listener import get_standings
 
 load_dotenv()
 
@@ -13,6 +14,7 @@ bot = commands.Bot(
     initial_channels=[os.environ["CHANNEL"]]
 )
 
+
 @bot.event
 async def event_ready():
     'Called once when the bot goes online.'
@@ -24,11 +26,13 @@ async def event_ready():
 @bot.event
 async def event_message(ctx):
     'Runs every time a message is sent in chat.'
+    print("Detected message")
 
     # make sure the bot ignores itself and the streamer
-    if ctx.author.name.lower() == os.environ["BOT_NICK"].lower():
-        return
+    # if ctx.author.name.lower() == os.environ["BOT_NICK"].lower():
+    #    return
 
+    print(bot.commands)
     await bot.handle_commands(ctx)
 
     # await ctx.channel.send(ctx.content)
@@ -38,9 +42,18 @@ async def event_message(ctx):
 
 
 @bot.command(name='ping')
-async def test(ctx):
+async def ping(ctx):
+    print("DETECTED MESSAGE")
     await ctx.send('pong!')
 
 
-if __name__ == "__main__":
+@bot.command(name='leader')
+async def leader(ctx):
+    print("DETECTED STANDINGS MESSAGE")
+    standings = get_standings()
+    print(standings[1]['driver'])
+    await ctx.send(f"{standings[1]['driver'].name.decode('utf-8')} is in the lead" )
+
+
+def start_bot():
     bot.run()
