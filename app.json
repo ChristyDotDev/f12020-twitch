@@ -1,0 +1,16 @@
+{
+  "name": "f12020telemetry",
+  "description": "Toy project for F1 2020 game telemetry",
+  "repository": "https://github.com/christytc10/f12020telemetry",
+  "logo": "",
+  "keywords": [
+    "F1 2020",
+    "Gaming"
+  ],
+  "env": {
+    "RACE_ID": {
+      "description": "ID for a race",
+      "value": "1"
+    }
+  }
+}
