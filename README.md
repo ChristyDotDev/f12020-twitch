@@ -1,7 +1,5 @@
-## f12020telemetry
+## f12020-twitch
 
 #### Pre-requisites
 
 #### Running
-
-#### Copyright
