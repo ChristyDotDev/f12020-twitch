@@ -22,6 +22,9 @@ this to your main account. Keep the oauth token private
 ## Configuring the bot
 Update the `.env` file with your config
 
+![alt f1udpsettings](https://i.imgur.com/VrFOtkC.png)
+
+
 ```
 # the oauth token we created on twitchapps
 TMI_TOKEN=oauth:11111111111111111111
