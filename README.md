@@ -30,6 +30,7 @@ Make sure your settings are as below for UDP in the in-game settings.
 
 ![alt f1udpsettings](https://i.imgur.com/VrFOtkC.png)
 
+You can tweak the send rate as you like but really, 10HZ is more than enough for this kinda telemetry. Nothing it's grabbing needs to be super up to date
 
 ```
 # the oauth token we created on twitchapps
