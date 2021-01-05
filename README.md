@@ -3,6 +3,9 @@
 This project is to create a wee app which you can run alongside the game F1 2020 which will
 allow you to make your telemetry data available on twitch streams via chat commands.
 
+
+![alt jeffbot](https://imgur.com/52591e28-0163-4494-8cd4-c546da3daaf9)
+
 ## Pre-requisites
 
 You'll need python installed. I've only tested it with Python 3.7.6
@@ -21,6 +24,9 @@ this to your main account. Keep the oauth token private
 
 ## Configuring the bot
 Update the `.env` file with your config
+
+## Enable telemetry in F1 2020
+Make sure your settings are as below for UDP in the in-game settings.
 
 ![alt f1udpsettings](https://i.imgur.com/VrFOtkC.png)
 
